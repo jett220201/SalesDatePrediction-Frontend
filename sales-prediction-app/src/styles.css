@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.main-header {
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.main-header p {
+    color: white;
+    font-size: large;
+}
+
+.main-header img {
+    padding-right: 35px;
+}
+
+.custom-dialog-container {
+    width: auto; 
+    max-width: 90vw !important; 
+    height: auto; 
+    max-height: 500px !important;
+    border-radius: 0 !important;
+    overflow-y: auto;
+}
+
+.custom-form-dialog-container {
+    width: auto; 
+    max-width: 90vw !important; 
+    height: auto; 
+    max-height: 90vh !important;
+    border-radius: 0 !important;
+    overflow-y: auto;
+}
+
+.mat-mdc-dialog-surface {
+    border-radius: 4px !important;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: transparent !important;
+}

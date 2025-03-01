@@ -1,0 +1,32 @@
+.salesTable, .headerTable, .titleTable {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.headerTable {
+    width: 50%;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.btn {
+    background-color: transparent;
+    border: 0;
+    font-weight: 600;
+    font-size: large;
+    cursor: pointer;
+}
+
+.view-orders {
+    color: darkred;
+}
+
+.new-order {
+    color: green;
+}

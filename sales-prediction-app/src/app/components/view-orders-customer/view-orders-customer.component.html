@@ -1,0 +1,45 @@
+<div class="header">
+    <p class="orders-title">{{ data.customer.CustomerName }} - Orders</p>
+</div>
+
+<table mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="Orderid">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Order ID</th>
+        <td mat-cell *matCellDef="let order">{{ order.Orderid }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Requireddate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Required Date</th>
+        <td mat-cell *matCellDef="let order">{{ order.Requireddate }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Shippeddate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Shipped Date</th>
+        <td mat-cell *matCellDef="let order">{{ order.Shippeddate }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Shipname">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Ship Name</th>
+        <td mat-cell *matCellDef="let order">{{ order.Shipname }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Shipaddress">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Ship Address</th>
+        <td mat-cell *matCellDef="let order">{{ order.Shipaddress }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Shipcity">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Ship City</th>
+        <td mat-cell *matCellDef="let order">{{ order.Shipcity }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+<button class="btn-close" (click)="closeViewOrdersModal()">
+    CLOSE
+</button>
